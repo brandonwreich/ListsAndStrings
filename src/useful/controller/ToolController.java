@@ -10,6 +10,8 @@ public class ToolController
 	
 	private List<Donut> donutList;
 	
+	//Constructor needed
+	
 	public ToolController()
 	{
 		donutList = new ArrayList<Donut>();
@@ -17,6 +19,8 @@ public class ToolController
 	
 	public void start()
 	{
+		Donut temp = new Donut();
 		
+		donutList.add(temp);
 	}
 }
