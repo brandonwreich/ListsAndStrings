@@ -10,8 +10,8 @@ public class Donut
 	private String flavor;
 	private int holeCount;
 	
-	public Donut(boolean hasSprinkles, boolean isGlazed, String shape, String flavor, int holeCount)
+	public Donut()
 	{
-
+		
 	}
 }

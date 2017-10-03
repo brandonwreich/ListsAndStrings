@@ -1,6 +1,10 @@
 package useful.controller;
 
-//** @author Brandon Reich **
+/**
+ * 
+ * @author Brandon Reich
+ * 
+ */
 
 public class ToolRunner
 {			
