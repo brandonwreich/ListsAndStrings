@@ -1,11 +1,9 @@
 package useful.controller;
 
+//** @author Brandon Reich **
+
 public class ToolRunner
-{
-	
-	// Starts the program
-	
-	
+{			
 	public static void main(String [] args)
 	{
 		ToolController myApp = new ToolController();
