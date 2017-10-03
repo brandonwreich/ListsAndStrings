@@ -17,6 +17,7 @@ public class ToolController
 	public ToolController()
 	{
 		donutList = new ArrayList<Donut>();
+		display = new PopupDisplay();
 	}
 	
 	public void start()
@@ -24,5 +25,33 @@ public class ToolController
 		Donut temp = new Donut();
 		
 		donutList.add(temp);
+		
+		fillTheList();
+		showTheList();
+		
+	}
+	
+	private void showTheList()
+	{
+		for(int index = 0; index < donutList.size(); index += 1)
+		{
+			display.displayText(donutList.get(index).toString());
+		}
+	}
+	
+	private void fillTheList()
+	{
+		Donut jellyFilled = new Donut("jelly filled");
+		Donut mapleBar = new Donut("Maple Bar");
+		Donut glazedDonut = new Donut("Glazed");
+		Donut sprinklesDonut = new Donut("Plain");
+		Donut trashDonut = new Donut();
+
+		donutList.add(jellyFilled);
+		donutList.add(mapleBar);
+		donutList.add(glazedDonut);
+		donutList.add(sprinklesDonut);
+		donutList.add(trashDonut);
+		
 	}
 }
