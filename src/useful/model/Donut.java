@@ -19,7 +19,7 @@ public class Donut
 		this.isGlazed = false;
 	}
 	
-	public Donut(String flavor, String shape)
+	public Donut(String flavor)
 	{
 		this();
 		this.flavor = flavor;
