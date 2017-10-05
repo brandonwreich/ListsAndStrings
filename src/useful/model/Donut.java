@@ -23,7 +23,7 @@ public class Donut
 	{
 		this();
 		this.flavor = flavor;
-		this.shape = shape;
+//		this.shape = shape;
 //		this.hasSprinkles = hasSprinkles;
 //		this.isGlazed = isGlazed;
 //		this.holeCount = holeCount;
