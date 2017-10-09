@@ -12,21 +12,21 @@ public class Donut
 	
 	public Donut()
 	{
-		this.flavor = "plain";
+		this.flavor = "Plain";
 		this.shape = "round";
 		this.holeCount = 1;
 		this.hasSprinkles = false;
 		this.isGlazed = false;
 	}
 	
-	public Donut(String flavor)
+	public Donut(String flavor, int holeCount)
 	{
 		this();
 		this.flavor = flavor;
 //		this.shape = shape;
 //		this.hasSprinkles = hasSprinkles;
 //		this.isGlazed = isGlazed;
-//		this.holeCount = holeCount;
+		this.holeCount = holeCount;
 	}
 	
 	public String getShape()

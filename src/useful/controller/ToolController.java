@@ -27,7 +27,10 @@ public class ToolController
 		donutList.add(temp);
 		
 		fillTheList();
-		showTheList();
+//		showTheList();
+		changeTheList();
+		practiceMessingWithTheList();
+
 	}
 	
 	private void showTheList()
@@ -54,11 +57,12 @@ public class ToolController
 	}
 	
 	private void fillTheList()
+
 	{
-		Donut jellyFilled = new Donut("jelly filled");
-		Donut mapleBar = new Donut("Maple Bar");
-		Donut glazedDonut = new Donut("Glazed");
-		Donut sprinklesDonut = new Donut("Sprinkles");
+		Donut jellyFilled = new Donut("Jelly Filled", 1);
+		Donut mapleBar = new Donut("Maple Bar", 0);
+		Donut glazedDonut = new Donut("Glazed", 1);
+		Donut sprinklesDonut = new Donut("Sprinkles", 1);
 		Donut trashDonut = new Donut();
 
 		donutList.add(jellyFilled);
@@ -67,4 +71,52 @@ public class ToolController
 		donutList.add(sprinklesDonut);
 		donutList.add(trashDonut);
 	}
+	
+	private void changeTheList()
+	{
+		display.displayText("The list is this big: " + donutList.size());
+		Donut removed = donutList.remove(0);
+		display.displayText(removed.getFlavor() + " was removed from the list");
+		display.displayText("Now it is this big: " + donutList.size());
+		donutList.add(removed);
+		
+		display.displayText("The list is still contains: " + donutList.size() + " items");
+		removed = donutList.set(3, new Donut());
+		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed");
+	}
+	
+	private void practiceMessingWithTheList()
+	{
+		display.displayText(donutList.get(3).toString());
+		
+		Donut eliminated = donutList.remove(1);
+		display.displayText(eliminated.getFlavor() + " has been eaten and is no longer in the list");
+		
+		donutList.add(4, eliminated);
+		display.displayText(donutList.get(4) + " was added to the list");
+		
+		display.displayText("The list is " + donutList.size() + " donuts long");
+		
+		Donut deleted = donutList.remove(0);
+		display.displayText(deleted + " was removed from the list");
+		
+		display.displayText(donutList.toString());
+		
+		Donut jellyFilled = new Donut("Jelly Filled", 1);
+		Donut sprinkles = new Donut("Sprinkles", 1);
+		
+		donutList.add(2, jellyFilled);
+		donutList.add(4, sprinkles);
+		
+		display.displayText("We added a " + donutList.get(2).getFlavor() + " donut to the list and a " + donutList.get(4).getFlavor() + " donut to the list");
+		
+		display.displayText(donutList.subList(0, 6).toString());
+		
+		for(int index = 0; index < donutList.size(); index += 1)
+		{
+			display.displayText(donutList.get(index).toString());
+			
+		}
+	}
+
 }
