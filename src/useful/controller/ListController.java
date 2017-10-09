@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import useful.model.Donut;
 import useful.view.PopupDisplay;
 
-public class ToolController
+public class ListController
 {
 	//Declares the list < > is needed
 	
@@ -14,7 +14,7 @@ public class ToolController
 	
 	//Constructor needed
 	
-	public ToolController()
+	public ListController()
 	{
 		donutList = new ArrayList<Donut>();
 		display = new PopupDisplay();
@@ -119,4 +119,13 @@ public class ToolController
 		}
 	}
 
+	public ArrayList<Donut> getDonutList()
+	{
+		return (ArrayList<Donut>) donutList;
+	}
+	
+	public PopupDisplay getDisplay()
+	{
+		return display;
+	}
 }
