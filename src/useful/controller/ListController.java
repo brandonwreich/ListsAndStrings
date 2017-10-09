@@ -122,10 +122,10 @@ public class ListController
 			{
 				for(int woop = 0; woop < 10; woop += 1)
 				{
-					System.out.println("THIS IS MY FAVORITE DONUT EVER!!!");
+					display.displayText("THIS IS MY FAVORITE DONUT EVER!!!");
 					for(int currentLetterIndex = 0; currentLetterIndex < currentFlavor.length(); currentLetterIndex += 1)
 					{
-						System.out.println(currentFlavor.substring(currentLetterIndex, currentLetterIndex + 1));
+						display.displayText(currentFlavor.substring(currentLetterIndex, currentLetterIndex + 1));
 					}
 				}
 			}
