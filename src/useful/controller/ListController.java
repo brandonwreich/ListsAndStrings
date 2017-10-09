@@ -112,10 +112,28 @@ public class ListController
 		
 		display.displayText(donutList.subList(0, 6).toString());
 		
+		String favoriteDonut = "Maple Bar";
 		for(int index = 0; index < donutList.size(); index += 1)
 		{
 			display.displayText(donutList.get(index).toString());
+			String currentFlavor = donutList.get(index).getFlavor();
 			
+			if(currentFlavor.equals(favoriteDonut))
+			{
+				for(int woop = 0; woop < 10; woop += 1)
+				{
+					display.displayText("THIS IS MY FAVORITE DONUT EVER!!!");
+					for(int currentLetterIndex = 0; currentLetterIndex < currentFlavor.length(); currentLetterIndex += 1)
+					{
+						display.displayText(currentFlavor.substring(currentLetterIndex, currentLetterIndex + 1));
+					}
+					
+				}
+			}
+			else
+			{
+				display.displayText("That is a good donut");
+			}
 		}
 	}
 
