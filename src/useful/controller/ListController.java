@@ -30,7 +30,6 @@ public class ListController
 //		showTheList();
 		changeTheList();
 		practiceMessingWithTheList();
-
 	}
 	
 	private void showTheList()
@@ -51,7 +50,6 @@ public class ListController
 			{
 				display.displayText(currentFlavor.substring(currentLetterIndex,  currentLetterIndex +1));
 			}
-			
 			display.displayText(donutList.get(index).toString());
 		}
 	}
@@ -76,6 +74,9 @@ public class ListController
 	{
 		display.displayText("The list is this big: " + donutList.size());
 		Donut removed = donutList.remove(0);
+		
+		//The donut in index is stored in the "removed" variable
+		
 		display.displayText(removed.getFlavor() + " was removed from the list");
 		display.displayText("Now it is this big: " + donutList.size());
 		donutList.add(removed);
@@ -89,10 +90,18 @@ public class ListController
 	{
 		display.displayText(donutList.get(3).toString());
 		
+		//.get shows you what's in that index
+		
 		Donut eliminated = donutList.remove(1);
+		
+		//.remove deletes that index and shrinks the list
+		
 		display.displayText(eliminated.getFlavor() + " has been eaten and is no longer in the list");
 		
 		donutList.add(4, eliminated);
+		
+		//.add adds into that index or at the end
+		
 		display.displayText(donutList.get(4) + " was added to the list");
 		
 		display.displayText("The list is " + donutList.size() + " donuts long");
@@ -101,6 +110,8 @@ public class ListController
 		display.displayText(deleted + " was removed from the list");
 		
 		display.displayText(donutList.toString());
+		
+		//.toString() is needed to print the list
 		
 		Donut jellyFilled = new Donut("Jelly Filled");
 		Donut sprinkles = new Donut("Sprinkles");
@@ -134,7 +145,6 @@ public class ListController
 				display.displayText("That is a good donut");
 			}
 		}
-		
 		display.displayText("I really Like donuts");
 		
 		Donut creamFilled = new Donut("Cream Filled");
