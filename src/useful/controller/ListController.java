@@ -59,10 +59,10 @@ public class ListController
 	private void fillTheList()
 
 	{
-		Donut jellyFilled = new Donut("Jelly Filled", 1);
-		Donut mapleBar = new Donut("Maple Bar", 0);
-		Donut glazedDonut = new Donut("Glazed", 1);
-		Donut sprinklesDonut = new Donut("Sprinkles", 1);
+		Donut jellyFilled = new Donut("Jelly Filled");
+		Donut mapleBar = new Donut("Maple Bar");
+		Donut glazedDonut = new Donut("Glazed");
+		Donut sprinklesDonut = new Donut("Sprinkles");
 		Donut trashDonut = new Donut();
 
 		donutList.add(jellyFilled);
@@ -102,8 +102,8 @@ public class ListController
 		
 		display.displayText(donutList.toString());
 		
-		Donut jellyFilled = new Donut("Jelly Filled", 1);
-		Donut sprinkles = new Donut("Sprinkles", 1);
+		Donut jellyFilled = new Donut("Jelly Filled");
+		Donut sprinkles = new Donut("Sprinkles");
 		
 		donutList.add(2, jellyFilled);
 		donutList.add(4, sprinkles);
@@ -115,7 +115,7 @@ public class ListController
 		String favoriteDonut = "Maple Bar";
 		for(int index = 0; index < donutList.size(); index += 1)
 		{
-			System.out.println(donutList.get(index).toString());
+			display.displayText(donutList.get(index).toString());
 			String currentFlavor = donutList.get(index).getFlavor();
 			
 			if(currentFlavor.equals(favoriteDonut))
@@ -137,7 +137,7 @@ public class ListController
 		
 		display.displayText("I really Like donuts");
 		
-		Donut creamFilled = new Donut("Cream Filled", 0);
+		Donut creamFilled = new Donut("Cream Filled");
 		donutList.add(creamFilled);
 		
 		display.displayText(donutList.get(7).getFlavor() + " donut was added to the list");
