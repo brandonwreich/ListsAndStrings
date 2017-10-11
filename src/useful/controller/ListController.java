@@ -50,6 +50,7 @@ public class ListController
 			{
 				display.displayText(currentFlavor.substring(currentLetterIndex,  currentLetterIndex +1));
 			}
+			
 			display.displayText(donutList.get(index).toString());
 		}
 	}
@@ -73,9 +74,10 @@ public class ListController
 	private void changeTheList()
 	{
 		display.displayText("The list is this big: " + donutList.size());
+		
 		Donut removed = donutList.remove(0);
 		
-		//The donut in index is stored in the "removed" variable
+		//The donut in index is stored in the "removed" variable and can be added back in
 		
 		display.displayText(removed.getFlavor() + " was removed from the list");
 		display.displayText("Now it is this big: " + donutList.size());
@@ -145,6 +147,7 @@ public class ListController
 				display.displayText("That is a good donut");
 			}
 		}
+		
 		display.displayText("I really Like donuts");
 		
 		Donut creamFilled = new Donut("Cream Filled");
@@ -152,6 +155,38 @@ public class ListController
 		
 		display.displayText(donutList.get(7).getFlavor() + " donut was added to the list");
 		display.displayText("Now we have " + donutList.size() + " donuts!!!!!");
+	}
+	
+	public int maxLength(ArrayList<String> myList)
+	{
+		int max = 0;
+		
+		for (int index = 0; index < myList.size(); index += 1)
+		{
+			if (max < myList.get(index).length())
+			{
+				max = myList.get(index).length();
+			}
+		}
+		
+		return max;
+	}
+	
+	public String longestString(ArrayList<String>myList)
+	{
+		String longest = "";
+		int max = 0;
+		
+		for (int index = 0; index < myList.size(); index +=1)
+		{
+			if (index < myList.get(index).length())
+			{
+				max = myList.get(index).length();
+				longest = myList.get(index);
+			}
+		}
+		
+		return longest;
 	}
 
 	public ArrayList<Donut> getDonutList()
