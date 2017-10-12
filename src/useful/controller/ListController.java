@@ -4595,7 +4595,7 @@ public class ListController
 				"I had virtually no rehearsal for that.");
 		
 		display.displayText("The longest text is " + maxLength(tempList) + " long." );
-//		display.displayText("It is: );
+		display.displayText("It is: " + longestString(tempList));
 		fillTheList();
 //		showTheList();
 		changeTheList();
