@@ -4595,7 +4595,7 @@ public class ListController
 				"I had virtually no rehearsal for that.");
 		
 		display.displayText("The longest text is " + maxLength(tempList) + " long." );
-		display.displayText("It is: " + longestString(tempList));
+//		display.displayText("It is: " + longestString(tempList));
 		fillTheList();
 //		showTheList();
 		changeTheList();
@@ -4626,7 +4626,7 @@ public class ListController
 	}
 	
 	private void fillTheList()
-
+ 
 	{
 		Donut jellyFilled = new Donut("Jelly Filled");
 		Donut mapleBar = new Donut("Maple Bar");
@@ -4703,7 +4703,7 @@ public class ListController
 			
 			if(currentFlavor.equals(favoriteDonut))
 			{
-				for(int woop = 0; woop < 10; woop += 1)
+				for(int woop = 0; woop < 5; woop += 1)
 				{
 					display.displayText("THIS IS MY FAVORITE DONUT EVER!!!");
 					for(int currentLetterIndex = 0; currentLetterIndex < currentFlavor.length(); currentLetterIndex += 1)
